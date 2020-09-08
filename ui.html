@@ -1,0 +1,43 @@
+<h5>Measure between two objects</h5>
+<button id="space-space-vert">Vertical measure</button>
+<button id="space-space-horz">Horizontal measure</button>
+
+<h5>Measure from single object to parent</h5>
+<button id="space-frame-top">Top measure</button>
+<button id="space-frame-bottom">Bottom measure</button>
+<button id="space-frame-right">Right measure</button>
+<button id="space-frame-left">Left measure</button>
+
+<h5>Auto-fix spacing</h5>
+<p>*coming soon*</p>
+
+<h5>Apply type labels</h5>
+<p>*coming soon*</p>
+
+<script>
+
+document.getElementById('space-space-vert').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'spec-space', spaceType: 'vert' } }, '*')
+}
+
+document.getElementById('space-space-horz').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'spec-space', spaceType: 'horz' } }, '*')
+}
+
+document.getElementById('space-frame-top').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'spec-space', spaceType: 'frame-top' } }, '*')
+}
+
+document.getElementById('space-frame-right').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'spec-space', spaceType: 'frame-right' } }, '*')
+}
+
+document.getElementById('space-frame-bottom').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'spec-space', spaceType: 'frame-bottom' } }, '*')
+}
+
+document.getElementById('space-frame-left').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'spec-space', spaceType: 'frame-left' } }, '*')
+}
+
+</script>
